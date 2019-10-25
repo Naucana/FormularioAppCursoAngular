@@ -1,0 +1,55 @@
+<h4>Formulario</h4>
+
+<div class="form_group row">
+  <label class="col-2 col-form-label">Apellidos</label>
+  <div class="col-8">
+    <input class="form-control" type="text" name="apellido" [(ngModel)]="usuario.apellidos" placeholder="Apellidos">
+  </div>
+</div>
+
+<div class="form_group row">
+  <label class="col-2 col-form-label">Nombre</label>
+  <div class="col-8">
+    <input class="form-control" type="text" name="nombre" [(ngModel)]="usuario.nombre" placeholder="Nombre"
+      #nombre="ngModel">
+    <div *ngIf="nombre.errors?.required">
+      Este campo es obligatorio
+    </div>
+    <div *ngIf="nombre.errors?.minlength">
+      Por lo menos, {{ nombre.errors.minlength.requiredLength }} caracteres
+    </div>
+  </div>
+</div>
+
+<div class="form_group row">
+  <label class="col-2 col-form-label">Correo Electronico</label>
+  <div class="col-8">
+    <input class="form-control" type="text" name="correo">
+  </div>
+</div>
+
+<div class="form_group row">
+  <label class="col-2 col-form-label">Edad</label>
+  <div class="col-8">
+    <input class="form-control" type="text" name="edad">
+  </div>
+</div>
+
+<div class="form_group row">
+  <label class="col-2 col-form-label">Telefono</label>
+  <div class="col-8">
+    <input class="form-control" type="text" name="telefono">
+  </div>
+</div>
+
+<div class="form-group row">
+  <div class="col-8">
+    <button (click)="guardar()">God save the queen</button>
+  </div>
+</div>
+
+<h2>Todo correcto = {{forma.valid}}</h2>
+
+<h2>Status = {{forma.status}}</h2>
+
+<h2>Pending = {{forma.pending}}</h2>
