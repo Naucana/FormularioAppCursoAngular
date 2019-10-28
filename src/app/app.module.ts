@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from "@angular/forms";
 import { PlantillaComponent } from './components/formularios/plantilla/plantilla.component';
+import { LoginComponent } from './components/formularios/login/login.component';
 // import { HttpClient } from "module";
 
 @NgModule({
   declarations: [
     AppComponent,
-    PlantillaComponent
+    PlantillaComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

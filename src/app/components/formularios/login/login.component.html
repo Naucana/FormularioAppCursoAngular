@@ -1,0 +1,17 @@
+<h1>Login</h1>
+
+<div class="form_group row">
+  <label class="col-2 col-form-label">Email</label>
+  <div class="col-8">
+    <input class="form-control" type="text" name="email" [(ngModel)]="cuenta.email" placeholder="Email">
+  </div>
+</div>
+
+<div class="form_group row">
+  <label class="col-2 col-form-label">Password</label>
+  <div class="col-8">
+    <input class="form-control" type="text" name="password" [(ngModel)]="cuenta.password" placeholder="Password">
+  </div>
+</div>
+
+<a [routerLink]="[ '/register' ]">¿No tienes cuenta? Clica aquí</a>

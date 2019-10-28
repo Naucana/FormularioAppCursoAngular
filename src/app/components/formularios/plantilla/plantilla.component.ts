@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-plantilla',
@@ -13,7 +13,9 @@ export class PlantillaComponent implements OnInit {
     nombre: '',
     correo: '',
     edad: '',
-    telefono: ''
+    telefono: '',
+    password: '',
+    repetirPassword: ''
   }
 
   forma: FormGroup;
@@ -25,13 +27,27 @@ export class PlantillaComponent implements OnInit {
       correo: new FormControl('', [
         Validators.required,
         Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')
-      ])
+      ]),
+      repetirPassword: new FormControl('', [this.passwordRepe.bind(this.forma)])
     });
    }
 
   ngOnInit() {
   }
 
-  guardar(){}
+  guardar(frm: NgForm){
+    console.log('ngForm', frm);
+    console.log("Valor frm", frm.value);
+    console.log("Usuario", this.usuario);
+    this.usuario = frm.value;
+  }
+
+  passwordRepe(control: FormControl) {
+    console.log(this);
+    console.log(control);
+    // console.log(this.forma.control.repetirPassword.value);
+  }
+
+  getErrors(){}
   
 }
