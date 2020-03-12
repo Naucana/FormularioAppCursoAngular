@@ -5,15 +5,14 @@
 <div class="form_group row">
   <label class="col-2 col-form-label">Apellidos</label>
   <div class="col-8">
-    <input class="form-control" type="text" name="apellido" [(ngModel)]="usuario.apellidos" placeholder="Apellidos">
+    <input class="form-control" type="text" [(ngModel)]="usuario.apellidos" placeholder="Apellidos">
   </div>
 </div>
 
 <div class="form_group row">
   <label class="col-2 col-form-label">Nombre</label>
   <div class="col-8">
-    <input class="form-control" type="text" name="nombre" [(ngModel)]="usuario.nombre" placeholder="Nombre"
-      #nombre="ngModel">
+    <input class="form-control" type="text" [(ngModel)]="usuario.nombre" placeholder="Nombre" #nombre="ngModel">
     <div *ngIf="nombre.errors?.required">
       Este campo es obligatorio
     </div>
@@ -26,35 +25,36 @@
 <div class="form_group row">
   <label class="col-2 col-form-label">Correo Electronico</label>
   <div class="col-8">
-    <input class="form-control" type="text" name="correo">
+    <input class="form-control" type="text" name="correo" [(ngModel)]="usuario.correo" placeholder="Correo">
   </div>
 </div>
 
 <div class="form_group row">
   <label class="col-2 col-form-label">Edad</label>
   <div class="col-8">
-    <input class="form-control" type="text" name="edad">
+    <input class="form-control" type="text" name="edad" placeholder="Edad" [(ngModel)]="usuario.edad">
   </div>
 </div>
 
 <div class="form_group row">
   <label class="col-2 col-form-label">Telefono</label>
   <div class="col-8">
-    <input class="form-control" type="text" name="telefono">
+    <input class="form-control" type="text" name="telefono" placeholder="Telefono" [(ngModel)]="usuario.telefono">
   </div>
 </div>
 
 <div class="form_group row">
   <label class="col-2 col-form-label">Password</label>
   <div class="col-8">
-    <input class="form-control" type="text" name="password">
+    <input class="form-control" type="text" name="password" placeholder="Password" [(ngModel)]="usuario.password">
   </div>
 </div>
 
 <div class="form_group row">
   <label class="col-2 col-form-label">Repetir Password</label>
   <div class="col-8">
-    <input class="form-control" type="text" name="repetirPassword">
+    <input class="form-control" type="text" name="repetirPassword" [(ngModel)]="usuario.repetirPassword"
+      placeholder="Repite Password">
   </div>
 </div>
 

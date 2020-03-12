@@ -39,7 +39,7 @@ export class PlantillaComponent implements OnInit {
     console.log('ngForm', frm);
     console.log("Valor frm", frm.value);
     console.log("Usuario", this.usuario);
-    this.usuario = frm.value;
+    //this.usuario = frm.value;
   }
 
   passwordRepe(control: FormControl) {
